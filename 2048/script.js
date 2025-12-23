@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const scoreDisplay = document.querySelector("#score")
     const resultDisplay = document.querySelector("#result")
     const width = 4
-    let squares = []
+    let squares = [] 
     let score = 0
 
     function createBoard() {
@@ -177,7 +177,6 @@ document.addEventListener("DOMContentLoaded", () => {
         generate()
     }
 
-    //check for the number 2048 in the squares to win
     function checkForWin() {
         for (let i = 0; i < squares.length; i++) {
             if (squares[i].innerHTML == 2048) {
@@ -206,10 +205,9 @@ document.addEventListener("DOMContentLoaded", () => {
         clearInterval(myTimer)
     }
 
-    //add colours
     function addColours() {
         for (let i = 0; i < squares.length; i++) {
-            if (squares[i].innerHTML == 0) squares[i].style.backgroundColor = "#afa192"
+            if (squares[i].innerHTML == 0) squares[i].style.backgroundColor = "#263238"
             else if (squares[i].innerHTML == 2) squares[i].style.backgroundColor = "#eee4da"
             else if (squares[i].innerHTML == 4) squares[i].style.backgroundColor = "#ede0c8"
             else if (squares[i].innerHTML == 8) squares[i].style.backgroundColor = "#f2b179"
